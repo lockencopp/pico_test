@@ -1,0 +1,6 @@
+{
+    "name": "devcontainer:latest",
+    "build": {"dockerfile": "Dockerfile"},
+    "runArgs": ["--entrypoint=", "--rm", "--privileged"],
+    "extensions": ["ms-vscode.cmake-tools", "twxs.cmake", "ms-vscode.cpptools", "marus25.cortex-debug"]
+}

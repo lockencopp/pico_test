@@ -11,6 +11,7 @@ pico_sdk_init()
 
 add_executable(test
   test.c
+  testinc/testinc.c
 )
 target_include_directories(test PUBLIC testinc)
 

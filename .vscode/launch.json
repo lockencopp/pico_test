@@ -21,11 +21,12 @@
     {
         "name": "Pico Debug",
         "cwd": "${workspaceRoot}",
-        "executable": "${command:cmake.launchTargetPath}",
+        "executable": "./build/test.elf",
         "request": "launch",
         "type": "cortex-debug",
         "servertype": "openocd",
         // This may need to be arm-none-eabi-gdb depending on your system
+        //"gdbPath" : "arm-none-eabi-gdb",
         "gdbPath" : "arm-none-eabi-gdb",
         "device": "RP2040",
         "configFiles": [
@@ -39,7 +40,7 @@
             "break main",
             "continue"
         ],
-        "searchDir": ["<PATH TO TCL>"],
+        "searchDir": ["<PATH TO TCL>"]
     }
 ]
 }

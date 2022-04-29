@@ -5,10 +5,10 @@ RUN apt-get update && apt-get upgrade -y
 
 # Install prerequisites for PicoSDK
 RUN apt-get install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib build-essential
-RUN apt-get install -y gdb
+RUN apt-get install -y gdb-multiarch
 RUN apt-get install -y wget git python3
 # Link gdb to arm-none-eabi-gdb for debugging
-RUN ln -s /usr/bin/gdb /usr/bin/arm-none-eabi-gdb
+RUN ln -s /usr/bin/gdb-multiarch /usr/bin/arm-none-eabi-gdb
 
 # Download and extract Segger JLink drivers and link to bin for later use
 RUN wget --post-data 'accept_license_agreement=accepted&non_emb_ctr=confirmed&submit=Download+software' -O jlink.tgz https://www.segger.com/downloads/jlink/JLink_Linux_V764c_x86_64.tgz
